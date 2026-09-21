@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV. Nusantara Digital Teknologi - ATM & Banking Consultant</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0052cc;
+            --primary-dark: #003a8f;
+            --primary-light: #e8f1ff;
+            --secondary: #00a8e8;
+            --accent: #ff6b35;
+            --success: #00c992;
+            --text-dark: #1a1a1a;
+            --text-muted: #6c757d;
+            --bg-light: #f5f7fb;
+            --bg-lighter: #fafbfc;
+            --border: #e0e6f2;
+            --shadow-sm: 0 2px 8px rgba(0, 52, 204, 0.08);
+            --shadow-md: 0 8px 24px rgba(0, 52, 204, 0.12);
+            --shadow-lg: 0 16px 48px rgba(0, 52, 204, 0.15);
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: white;
+            overflow-x: hidden;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            background: white;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1.3rem;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, #0052cc 0%, #00a8e8 100%);
+            color: white;
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(30px); }
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.15;
+            letter-spacing: -1px;
+        }
+
+        .hero-text p {
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.9rem 2.2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .hero-visual {
+            position: relative;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-graphic {
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 6rem;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* SECTIONS */
+        .section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.8rem;
+            color: var(--text-dark);
+            letter-spacing: -0.5px;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* SERVICES SECTION */
+        .services {
+            background: var(--bg-lighter);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-icon {
+            font-size: 2.8rem;
+            margin-bottom: 1.2rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-light), rgba(0, 168, 232, 0.1));
+            border-radius: 12px;
+            color: var(--primary);
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* FEATURES SECTION */
+        .features {
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .feature-box {
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--primary-light), rgba(0, 168, 232, 0.05));
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-box h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .feature-box p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ABOUT SECTION */
+        .about {
+            background: var(--bg-lighter);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .about-text p {
+            margin-bottom: 1.2rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .about-visual {
+            position: relative;
+            height: 350px;
+            background: linear-gradient(135deg, var(--primary-light), rgba(0, 168, 232, 0.1));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .about-visual::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 168, 232, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            animation: drift 20s linear infinite;
+        }
+
+        @keyframes drift {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(40px, 40px); }
+        }
+
+        .stats-group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* CONTACT SECTION */
+        .contact {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+
+        .contact .section-header h2,
+        .contact .section-header p {
+            color: white;
+        }
+
+        .contact .section-header p {
+            opacity: 0.95;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .contact-detail {
+            margin-bottom: 2rem;
+        }
+
+        .contact-detail label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-detail p,
+        .contact-detail a {
+            color: white;
+            font-size: 0.95rem;
+            text-decoration: none;
+        }
+
+        .contact-detail a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all 0.2s;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            background: white;
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 2.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1.5rem;
+                font-size: 0.85rem;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-visual {
+                height: 300px;
+            }
+
+            .section {
+                padding: 3rem 1.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-visual {
+                height: 250px;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-group {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .stat-number {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            nav ul {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .hero {
+                padding: 3rem 1rem;
+            }
+
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-group {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <div class="logo-icon">🏧</div>
+                <span>Nusantara Digital</span>
+            </a>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#features">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Banking Technology Consulting for Indonesia</h1>
+                <p>Transform your ATM and electronic channel infrastructure with 30+ years of industry expertise. We deliver solutions that improve reliability, efficiency, and customer experience.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Get Consultation →</a>
+                    <a href="#services" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-graphic">🏦</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services section" id="services">
+        <div class="section-header">
+            <h2>Our Services</h2>
+            <p>Comprehensive consulting across ATM technology, electronic channels, security, and banking operations</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">⚙️</div>
+                <h3>IT Consulting</h3>
+                <p>Project management, system assessment, technology evaluation, and infrastructure consulting tailored to your banking needs.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏧</div>
+                <h3>ATM Solutions</h3>
+                <p>Solution assessment, deployment planning, fleet optimization, lifecycle management, and emerging technology advisory.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>Project Management</h3>
+                <p>End-to-end delivery from planning through implementation supervision, acceptance support, and post-implementation review.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔒</div>
+                <h3>Security & Compliance</h3>
+                <p>Remote Key Management, PCI PIN compliance, cash management consulting, and cryptographic security guidance.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🛠️</div>
+                <h3>Service & Maintenance</h3>
+                <p>Contract evaluation, SLA review, service performance assessment, and vendor management optimization.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💡</div>
+                <h3>R&D Innovation</h3>
+                <p>New technology research, feasibility assessment, proof of concept support, and emerging tech advisory including AI and biometrics.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features section" id="features">
+        <div class="section-header">
+            <h2>Why Choose Nusantara Digital</h2>
+            <p>Trusted expertise that drives banking technology transformation</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-box">
+                <span class="feature-number">30+</span>
+                <h3>Years Experience</h3>
+                <p>Deep expertise in ATM and electronic channel technology across regional and global banking institutions.</p>
+            </div>
+            <div class="feature-box">
+                <span class="feature-number">1000s</span>
+                <h3>ATM Units</h3>
+                <p>Deployed, optimized, and maintained thousands of ATM units across Indonesian banking networks.</p>
+            </div>
+            <div class="feature-box">
+                <span class="feature-number">10+</span>
+                <h3>Service Areas</h3>
+                <p>Comprehensive consulting across IT, ATM, security, project management, and emerging technologies.</p>
+            </div>
+            <div class="feature-box">
+                <span class="feature-number">100%</span>
+                <h3>Solution Focused</h3>
+                <p>Every recommendation aligned with your business objectives, operational needs, and cost efficiency.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about section">
+        <div class="about-content">
+            <div>
+                <div class="about-visual">📱</div>
+            </div>
+            <div class="about-text">
+                <h3>Transforming Banking Technology</h3>
+                <p><strong>CV. Nusantara Digital Teknologi</strong> specializes in electronic channels (eChannels), Automated Teller Machines (ATMs), and banking operational support technology.</p>
+                
+                <p>We combine technical expertise with operational knowledge to deliver practical, independent recommendations that align technology decisions with your business needs.</p>
+
+                <p><strong>Our Approach:</strong> Strategy → Assessment → Solution → Project → Implementation → Operation → Maintenance → Optimization</p>
+
+                <p>We work with banks and financial institutions to improve reliability, availability, efficiency, and lifecycle management of critical banking systems.</p>
+
+                <div class="stats-group">
+                    <div class="stat-box">
+                        <span class="stat-number">30+</span>
+                        <span class="stat-label">Industry Experience</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Service Categories</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Projects Delivered</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">Strategic Phases</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact section" id="contact">
+        <div class="section-header">
+            <h2>Start Your Consultation</h2>
+            <p>Ready to transform your banking technology? Get in touch with our expert team today.</p>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>📍 Contact Information</h3>
+                
+                <div class="contact-detail">
+                    <label>📧 Email</label>
+                    <a href="mailto:nusantara.dtekhnologi@ndt.co.id">nusantara.dtekhnologi@ndt.co.id</a>
+                </div>
+
+                <div class="contact-detail">
+                    <label>📞 Phone</label>
+                    <a href="tel:+6281514144465">+62 815 1414 4465</a>
+                </div>
+
+                <div class="contact-detail">
+                    <label>📍 Address</label>
+                    <p>Komp. Bekasi Permai<br>Jl. Bekasi Permai X Blok BM No. 7<br>Bekasi Jaya, Bekasi 17112<br>Indonesia</p>
+                </div>
+
+                <div class="contact-detail">
+                    <label>⏰ Business Hours</label>
+                    <p>Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday: By appointment</p>
+                </div>
+            </div>
+
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="company" placeholder="Your company">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <input type="text" id="subject" name="subject" placeholder="How can we help?" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your banking technology needs..." required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 CV. Nusantara Digital Teknologi. All rights reserved. | Professional ATM & Banking Consulting Services</p>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            if (!data.name || !data.email || !data.subject || !data.message) {
+                alert('Please fill in all required fields');
+                return;
+            }
+
+            const submitBtn = this.querySelector('.form-submit');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                alert(`Thank you ${data.name}! We will contact you at ${data.email} soon.`);
+                this.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 800);
+        });
+    </script>
+</body>
+</html>
