@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV. Nusantara Digital Teknologi - ATM & Banking Consultant</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0051cc;
+            --primary-dark: #003d99;
+            --primary-light: #e8f0ff;
+            --secondary: #1890ff;
+            --accent: #00d9ff;
+            --danger: #ff4d4f;
+            --success: #52c41a;
+            --warning: #faad14;
+            --text-dark: #1a1a1a;
+            --text-muted: #666;
+            --bg-white: #ffffff;
+            --bg-gray: #f5f5f5;
+            --bg-light-gray: #fafafa;
+            --border: #d9d9d9;
+            --shadow-xs: 0 1px 4px rgba(0, 0, 0, 0.08);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.12);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.18);
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--bg-white);
+            font-size: 14px;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* HEADER */
+        header {
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-xs);
+        }
+
+        nav {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #0051cc 0%, #0066ff 50%, #1890ff 100%);
+            color: white;
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1), transparent);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: 5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255,255,255,0.05), transparent);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 1320px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            line-height: 1.8;
+            max-width: 500px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 1.8rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-2px);
+        }
+
+        .hero-visual {
+            position: relative;
+            height: 350px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            font-size: 5rem;
+        }
+
+        /* SECTIONS */
+        .section {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        .section-header {
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .section-header p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        /* EXPERTISE SECTION */
+        .expertise {
+            background: var(--bg-light-gray);
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+
+        .expertise-card {
+            background: var(--bg-white);
+            border-radius: 8px;
+            padding: 2.5rem;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+
+        .expertise-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+            border-color: var(--primary);
+        }
+
+        .expertise-icon {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .expertise-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--text-dark);
+        }
+
+        .expertise-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.2rem;
+        }
+
+        .expertise-list {
+            list-style: none;
+        }
+
+        .expertise-list li {
+            padding: 0.4rem 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .expertise-list li::before {
+            content: '✓';
+            color: var(--success);
+            font-weight: 700;
+            min-width: 20px;
+        }
+
+        /* CASE STUDIES */
+        .case-studies {
+            background: var(--bg-white);
+        }
+
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .case-card {
+            background: var(--bg-gray);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border);
+        }
+
+        .case-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+
+        .case-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem;
+            min-height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .case-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-client {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .case-body {
+            padding: 2rem;
+        }
+
+        .case-detail {
+            margin-bottom: 1.5rem;
+        }
+
+        .case-label {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.4rem;
+        }
+
+        .case-value {
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* STATS */
+        .stats {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        .stats-content {
+            max-width: 1320px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .stat-box h3 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-box p {
+            font-size: 0.95rem;
+            opacity: 0.95;
+        }
+
+        /* FEATURES */
+        .features {
+            background: var(--bg-light-gray);
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-item {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-xs);
+        }
+
+        .feature-item h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--text-dark);
+        }
+
+        .feature-item p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* CONTACT CTA */
+        .contact-cta {
+            background: linear-gradient(135deg, #0051cc, #1890ff);
+            color: white;
+            border-radius: 8px;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .contact-cta h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .contact-cta p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* CONTACT FORM */
+        .contact {
+            background: var(--bg-white);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .contact-detail {
+            margin-bottom: 2rem;
+        }
+
+        .contact-detail strong {
+            display: block;
+            color: var(--primary);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .contact-detail p, .contact-detail a {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .contact-detail a {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 0.8rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            transition: all 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px var(--primary-light);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-submit {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 0.85rem 2rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        footer-content {
+            max-width: 1320px;
+            margin: 0 auto;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-visual {
+                height: 250px;
+                font-size: 3rem;
+            }
+
+            .section {
+                padding: 3rem 1.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .expertise-grid,
+            .cases-grid,
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .hero {
+                padding: 3rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .stats-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="logo-icon">🏧</div>
+                <span>Nusantara Digital</span>
+            </div>
+            <ul>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#cases">Cases</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <div>
+                <h1>ATM & Banking Technology Consulting</h1>
+                <p>Transform your electronic channels and ATM infrastructure with expert consulting. 30+ years of industry experience driving banking technology innovation across Indonesia.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Start Consultation</a>
+                    <a href="#expertise" class="btn btn-secondary">View Expertise →</a>
+                </div>
+            </div>
+            <div class="hero-visual">🏦💰🔐</div>
+        </div>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section class="expertise section" id="expertise">
+        <div class="section-header">
+            <h2>Core Consulting Expertise</h2>
+            <p>Comprehensive services across ATM technology, electronic channels, security, and banking operations</p>
+        </div>
+        <div class="expertise-grid">
+            <div class="expertise-card">
+                <div class="expertise-icon">⚙️</div>
+                <h3>IT Consulting & Infrastructure</h3>
+                <p>Strategic technology assessment, system design, and infrastructure consulting tailored to banking needs.</p>
+                <ul class="expertise-list">
+                    <li>Project Management</li>
+                    <li>Technology Evaluation</li>
+                    <li>System Assessment</li>
+                    <li>Business Requirements Analysis</li>
+                </ul>
+            </div>
+
+            <div class="expertise-card">
+                <div class="expertise-icon">🏧</div>
+                <h3>ATM Solutions & Deployment</h3>
+                <p>End-to-end ATM strategy, deployment planning, fleet optimization, and lifecycle management.</p>
+                <ul class="expertise-list">
+                    <li>Solution Assessment</li>
+                    <li>Deployment Planning</li>
+                    <li>Fleet Optimization</li>
+                    <li>Lifecycle Management</li>
+                </ul>
+            </div>
+
+            <div class="expertise-card">
+                <div class="expertise-icon">🔒</div>
+                <h3>Security & Compliance</h3>
+                <p>Remote Key Management, PCI compliance, cash management, and cryptographic security advisory.</p>
+                <ul class="expertise-list">
+                    <li>RKM Design & Implementation</li>
+                    <li>PCI PIN Security</li>
+                    <li>Cash Management Systems</li>
+                    <li>Compliance Advisory</li>
+                </ul>
+            </div>
+
+            <div class="expertise-card">
+                <div class="expertise-icon">📊</div>
+                <h3>Service & Maintenance</h3>
+                <p>Contract evaluation, SLA review, service performance assessment, and vendor optimization.</p>
+                <ul class="expertise-list">
+                    <li>Contract Evaluation</li>
+                    <li>SLA Review & Optimization</li>
+                    <li>Service Performance Assessment</li>
+                    <li>Vendor Management</li>
+                </ul>
+            </div>
+
+            <div class="expertise-card">
+                <div class="expertise-icon">💡</div>
+                <h3>R&D & Innovation</h3>
+                <p>Technology research, feasibility assessment, and emerging tech advisory including AI and biometrics.</p>
+                <ul class="expertise-list">
+                    <li>Technology Research</li>
+                    <li>Feasibility Assessment</li>
+                    <li>Proof of Concept</li>
+                    <li>Emerging Tech Advisory</li>
+                </ul>
+            </div>
+
+            <div class="expertise-card">
+                <div class="expertise-icon">📱</div>
+                <h3>Digital Channel Transformation</h3>
+                <p>Strategy, assessment, and optimization of electronic channels and self-service banking.</p>
+                <ul class="expertise-list">
+                    <li>Channel Strategy</li>
+                    <li>Digital Transformation</li>
+                    <li>Customer Experience</li>
+                    <li>Technology Integration</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+        <div class="stats-content">
+            <div class="stat-box">
+                <h3>30+</h3>
+                <p>Years Industry Experience</p>
+            </div>
+            <div class="stat-box">
+                <h3>1000s</h3>
+                <p>ATM Units Deployed</p>
+            </div>
+            <div class="stat-box">
+                <h3>100+</h3>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat-box">
+                <h3>10+</h3>
+                <p>Service Categories</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section class="case-studies section" id="cases">
+        <div class="section-header">
+            <h2>Recent Project Experience</h2>
+            <p>Proven expertise from strategic projects across leading Indonesian banks</p>
+        </div>
+        <div class="cases-grid">
+            <div class="case-card">
+                <div class="case-header">
+                    <div class="case-title">ATM UPS Smart Implementation</div>
+                    <div class="case-client">Bank Danamon Indonesia</div>
+                </div>
+                <div class="case-body">
+                    <div class="case-detail">
+                        <div class="case-label">Scope</div>
+                        <div class="case-value">Implementation of UPS Smart solutions for ATM networks covering 1,560+ ATM units</div>
+                    </div>
+                    <div class="case-detail">
+                        <div class="case-label">Focus</div>
+                        <div class="case-value">Technical coordination, cost optimization, and technical target achievement</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-card">
+                <div class="case-header">
+                    <div class="case-title">ATM Branding Program</div>
+                    <div class="case-client">Bank Danamon Indonesia</div>
+                </div>
+                <div class="case-body">
+                    <div class="case-detail">
+                        <div class="case-label">Scope</div>
+                        <div class="case-value">Enterprise-wide ATM branding implementation across 1,560+ ATM network</div>
+                    </div>
+                    <div class="case-detail">
+                        <div class="case-label">Focus</div>
+                        <div class="case-value">Network-scale coordination, brand consistency, technical integration</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-card">
+                <div class="case-header">
+                    <div class="case-title">Remote Key Management Advisory</div>
+                    <div class="case-client">Multiple Banking Clients</div>
+                </div>
+                <div class="case-body">
+                    <div class="case-detail">
+                        <div class="case-label">Scope</div>
+                        <div class="case-value">RSA-based RKM design and PCI PIN Security Requirement 18-3 compliance</div>
+                    </div>
+                    <div class="case-detail">
+                        <div class="case-label">Focus</div>
+                        <div class="case-value">Key Block (TR-31) migration, encryption security, compliance assurance</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-card">
+                <div class="case-header">
+                    <div class="case-title">ATM Managed Services (SaaS)</div>
+                    <div class="case-client">Banking Institutions</div>
+                </div>
+                <div class="case-body">
+                    <div class="case-detail">
+                        <div class="case-label">Scope</div>
+                        <div class="case-value">Turn-key ATM managed services model design covering machine, network, and operations</div>
+                    </div>
+                    <div class="case-detail">
+                        <div class="case-label">Focus</div>
+                        <div class="case-value">Operational cost reduction, capital optimization, service model design</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-card">
+                <div class="case-header">
+                    <div class="case-title">Cash Management Platform</div>
+                    <div class="case-client">Indonesian Banking Sector</div>
+                </div>
+                <div class="case-body">
+                    <div class="case-detail">
+                        <div class="case-label">Scope</div>
+                        <div class="case-value">Enterprise cash management consulting: forecasting, replenishment, optimization</div>
+                    </div>
+                    <div class="case-detail">
+                        <div class="case-label">Focus</div>
+                        <div class="case-value">Route optimization, reconciliation, liquidity management</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-card">
+                <div class="case-header">
+                    <div class="case-title">Emerging Technology (AI & Biometrics)</div>
+                    <div class="case-client">R&D Initiative</div>
+                </div>
+                <div class="case-body">
+                    <div class="case-detail">
+                        <div class="case-label">Scope</div>
+                        <div class="case-value">AI and biometric-enabled ATM authentication research and development</div>
+                    </div>
+                    <div class="case-detail">
+                        <div class="case-label">Focus</div>
+                        <div class="case-value">Voice biometrics, security enhancement, customer experience improvement</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features section">
+        <div class="section-header">
+            <h2>Why Partner With Us</h2>
+            <p>Strategic advantages for your banking technology initiatives</p>
+        </div>
+        <div class="features-list">
+            <div class="feature-item">
+                <h4>✓ Deep Industry Knowledge</h4>
+                <p>30+ years of hands-on experience with ATM technology, banking operations, and electronic channels across regional and global institutions.</p>
+            </div>
+            <div class="feature-item">
+                <h4>✓ Proven Track Record</h4>
+                <p>Successful execution of major projects with Indonesia's leading banks, managing thousands of ATM units and complex technical integrations.</p>
+            </div>
+            <div class="feature-item">
+                <h4>✓ Complete Solution Coverage</h4>
+                <p>End-to-end expertise from strategy through optimization, covering IT, ATM, security, maintenance, and emerging technologies.</p>
+            </div>
+            <div class="feature-item">
+                <h4>✓ Business-Focused Consulting</h4>
+                <p>Every recommendation aligns with your business objectives, operational efficiency, cost management, and strategic goals.</p>
+            </div>
+            <div class="feature-item">
+                <h4>✓ Local Market Understanding</h4>
+                <p>Deep knowledge of Indonesian banking market dynamics, regulations (OJK, BI), and local banking institution needs and constraints.</p>
+            </div>
+            <div class="feature-item">
+                <h4>✓ Vendor-Neutral Approach</h4>
+                <p>Independent, objective recommendations based on technical merit and your specific needs, not vendor relationships.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="section">
+        <div class="contact-cta">
+            <h3>Ready to Transform Your Banking Technology?</h3>
+            <p>Let's discuss your ATM and electronic channel strategy. Our team is ready to help you optimize operations and drive innovation.</p>
+            <a href="#contact" class="btn btn-primary">Schedule Consultation</a>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact section" id="contact">
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <p>Contact us to discuss your banking technology needs and consulting requirements</p>
+        </div>
+
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h3>📍 Contact Information</h3>
+                
+                <div class="contact-detail">
+                    <strong>📧 Email</strong>
+                    <p><a href="mailto:nusantara.dtekhnologi@ndt.co.id">nusantara.dtekhnologi@ndt.co.id</a></p>
+                </div>
+
+                <div class="contact-detail">
+                    <strong>📞 Phone</strong>
+                    <p><a href="tel:+6281514144465">+62 815 1414 4465</a></p>
+                </div>
+
+                <div class="contact-detail">
+                    <strong>📍 Address</strong>
+                    <p>
+                        Komp. Bekasi Permai<br>
+                        Jl. Bekasi Permai X Blok BM No. 7<br>
+                        Bekasi Jaya, Bekasi 17112<br>
+                        Indonesia
+                    </p>
+                </div>
+
+                <div class="contact-detail">
+                    <strong>⏰ Business Hours</strong>
+                    <p>Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday: By appointment</p>
+                </div>
+            </div>
+
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company / Bank</label>
+                    <input type="text" id="company" name="company" placeholder="Your organization">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Consultation Topic *</label>
+                    <input type="text" id="subject" name="subject" placeholder="e.g., ATM Strategy, Security, Infrastructure" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your banking technology needs and objectives..." required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit">Send Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <footer-content>
+            <p>&copy; 2024 CV. Nusantara Digital Teknologi. All rights reserved. | ATM & Electronic Channel Banking Consulting</p>
+        </footer-content>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            if (!data.name || !data.email || !data.subject || !data.message) {
+                alert('Please fill in all required fields');
+                return;
+            }
+
+            const submitBtn = this.querySelector('.form-submit');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                alert(`Thank you ${data.name}! We received your inquiry and will contact you at ${data.email} shortly.`);
+                this.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 800);
+        });
+    </script>
+</body>
+</html>
